@@ -1,5 +1,12 @@
+$paletteDark: rgba(22, 25, 37, 1);
+$paletteTile: rgba(253, 252, 242, 1);
+$paletteBackground: rgba(236, 243, 242, 1);
+$paletteFocus: rgba(35, 57, 91, 1);
+$paletteLink: rgba(64, 110, 142, 1);
+
+
 // Background colours
-$backgroundColour: #ffffff !default;
+$backgroundColour: $paletteBackground !default;
 $codeBackgroundColour: #fafafa !default;
 $featureBackgroundColour: #f9fafa !default;
 $accentColour: #05bf85 !default;
@@ -7,8 +14,8 @@ $accentColour: #05bf85 !default;
 // Text colours
 $headingColour: #242e2b !default;
 $bodyColour: #384743 !default;
-$linkColour: #05bf85 !default;
-$hoverColour: #008000 !default;
+$linkColour: $paletteLink !default;
+$hoverColour: $paletteFocus !default;
 $focusColour: #fa407a !default;
 $captionColour: #a8adac !default;
 $white: #ffffff !default;

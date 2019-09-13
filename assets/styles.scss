@@ -4,3 +4,37 @@ styles: true
 ---
 
 @import "alembic";
+
+#logo-title {
+	margin-right: auto;
+	span {
+		color: black;
+		&:hover, &:active, &:focus {
+			color: black;
+			text-decoration: none;
+		}
+	}
+}
+
+article, .nav--paginator {
+	padding: 1rem;
+	margin-bottom: 0.5rem;
+	background-color: $paletteTile;
+}
+
+.logo {
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+}
+
+.header .container {
+	padding: 0;
+}
+
+.header .nav {
+	flex: 1;
+}
+
+.logo img {
+	max-height: 3rem;
+}
