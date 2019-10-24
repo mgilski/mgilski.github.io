@@ -29,12 +29,33 @@ article, .nav--paginator {
 
 .header .container {
 	padding: 0;
+	position: relative;
 }
 
 .header .nav {
-	flex: 1;
+	right: 0px;
+	height: 100%;
+	position: absolute;
+	width: 100%;
 }
 
 .logo img {
 	max-height: 3rem;
+}
+
+ul.nav--top.list.list--nav {
+    height: 100%;
+    width: 100%;
+}
+
+li.item.item--nav {
+    align-items: center;
+    height: 100%;
+    display: inline-flex;
+    &.item--current, &:hover {
+    	background: $linkColour;
+    	& a {
+    		color: $backgroundColour;
+    	}
+    }
 }
