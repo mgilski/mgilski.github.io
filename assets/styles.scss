@@ -22,40 +22,52 @@ article, .nav--paginator {
 	background-color: $paletteTile;
 }
 
+.article.article--post {
+	margin-bottom: 1rem;
+}
+
 .logo {
 	margin-top: 0.2rem;
 	margin-bottom: 0.2rem;
 }
 
-.header .container {
-	padding: 0;
-	position: relative;
-}
 
-.header .nav {
-	right: 0px;
-	height: 100%;
-	position: absolute;
-	width: 100%;
-}
+@include breakpoint(break-1) {
+	.header .container {
+		padding: 0;
+		position: relative;
+	}
 
-.logo img {
-	max-height: 3rem;
-}
+	.header .nav {
+		right: 0px;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+	}
 
-ul.nav--top.list.list--nav {
-    height: 100%;
-    width: 100%;
-}
+	.logo img {
+		max-height: 3rem;
+	}
 
-li.item.item--nav {
-    align-items: center;
-    height: 100%;
-    display: inline-flex;
-    &.item--current, &:hover {
-    	background: $linkColour;
-    	& a {
-    		color: $backgroundColour;
-    	}
-    }
+	ul.nav--top.list.list--nav {
+	    height: 100%;
+	    width: 100%;
+	}
+
+	.header li.item.item--nav {
+	    align-items: center;
+	    height: 100%;
+	    display: inline-flex;
+	    &.item--current, &:hover {
+	    	background: $paletteFocus;
+	    	& a {
+	    		color: $backgroundColour;
+	    	}
+	    }
+	}
+
+	.header li.item.item--nav {
+		margin: 0;
+		padding: 0 0.4rem;
+	}
 }
