@@ -21,12 +21,14 @@
 .carousel__photo {
   opacity: 0;
   position: absolute;
-  top:0;
-  width: 100%;
-  margin: auto;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1rem 4rem;
   z-index: 100;
   transition: transform .5s, opacity .5s, z-index .5s;
+  max-height: 25rem;
 }
 
 /* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
