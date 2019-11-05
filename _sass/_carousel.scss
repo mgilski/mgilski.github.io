@@ -1,8 +1,15 @@
 /* Parent wrapper to carousel. Width can be changed as needed. */
 .carousel-wrapper {
   overflow: hidden;
-  width: 90%;
-  margin: auto;
+  width: 100%;
+  margin: 0;
+}
+
+.notransition {
+  -webkit-transform-style: none !important;
+  -moz-transform-style: none !important;
+  transform-style: none !important;
+  transition: none !important;
 }
 
 /* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
@@ -22,13 +29,14 @@
   opacity: 0;
   position: absolute;
   top: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem 4rem;
+  // display: block;
+  // margin-left: auto;
+  // margin-right: auto;
+  width: 100%;
+  padding: 0 0;
   z-index: 100;
   transition: transform .5s, opacity .5s, z-index .5s;
-  max-height: 25rem;
+  // max-height: 25rem;
 }
 
 /* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
@@ -60,14 +68,14 @@
 .carousel__button--next {
   position: absolute;
   top:50%;
-  width: 3rem;
-  height: 3rem;
-  background-color: #FFF;
+  width: 5rem;
+  height: 5rem;
+  // background-color: #FFF;
   transform: translateY(-50%);
   border-radius: 50%;
   cursor: pointer; 
   z-index: 1001; /* Sit on top of everything */
-  border:1px solid black;
+  // border:1px solid black;
 /*  opacity: 0;  Hide buttons until carousel is initialised 
   transition:opacity 1s;*/
 }
@@ -83,18 +91,21 @@
 /* Use pseudo elements to insert arrows inside of navigation buttons */
 .carousel__button--prev::after,
 .carousel__button--next::after {
-  content: " ";
+  content: "▷";
+  color: white;
+  font-size: xx-large;
   position: absolute;
   width: 10px;
   height: 10px;
-  top: 50%;
-  left: 54%;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  transform: translate(-50%, -50%) rotate(135deg);
+  top: 33%;
+  left: 50%;
+  // border-right: 2px solid black;
+  // border-bottom: 2px solid black;
+  transform: scaleX(-1);
 }
 
 .carousel__button--next::after {
-  left: 47%;
-  transform: translate(-50%, -50%) rotate(-45deg);
+  left: 45%;
+  transform: none;
+  // transform: translate(-50%, -50%);
 }
