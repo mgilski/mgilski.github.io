@@ -1,8 +1,12 @@
 <div class="carousel-wrapper">
     <div class="carousel">
 
-      <img class="carousel__photo initial" src="https://placekitten.com/g/1600/533">
+      <img class="carousel__photo initial" src="https://placekitten.com/1600/533">
+      <img class="carousel__photo" src="https://placekitten.com/g/1600/533">
       <img class="carousel__photo" src="https://placekitten.com/1600/533">
+      <img class="carousel__photo" src="https://placekitten.com/g/1600/533">
+      <img class="carousel__photo" src="https://placekitten.com/1600/533">
+      <img class="carousel__photo" src="https://placekitten.com/g/1600/533">
       <!-- <img class="carousel__photo" src="https://images.pexels.com/photos/320014/pexels-photo-320014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"> -->
       <!-- <img class="carousel__photo" src="https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"> -->
       
@@ -52,6 +56,10 @@
     }, 500);
   }
 
+  function mod(n, m) {
+    return ((n % m) + m) % m;
+  }
+
   function moveCarouselTo(slide, dirNext) {
 
     // Check if carousel is moving, if not, allow interaction
@@ -61,13 +69,14 @@
       disableInteraction();
 
       // Preemptively set variables for the current next and previous slide, as well as the potential next or previous slide.
-      var newPrevious = (slide - 1) % totalItems,
+      var newPrevious = mod(slide - 1, totalItems),
           newNext = (slide + 1) % totalItems,
-          oldPrevious = (slide - 2) % totalItems,
+          oldPrevious = mod(slide - 2, totalItems),
           oldNext = (slide + 2) % totalItems;
+          console.log(slide);
 
       // Test if carousel has more than three items
-      if (totalItems  > 2) {
+      if (false/*totalItems  > 2*/) {
 
         // Checks if the new potential slide is out of bounds and sets slide numbers
         if (newPrevious <= 0) {
@@ -90,30 +99,36 @@
         // Now we've worked out where we are and where we're going, by adding and removing classes, we'll be triggering the carousel's transitions.
 
         // Based on the current slide, reset to default classes.
-        items[oldPrevious].className = itemClassName;
-        items[oldNext].className = itemClassName;
+        for (var i = items.length - 1; i >= 0; i--) {
+          items[i].className = itemClassName;
+        }
+        // items[oldPrevious].className = itemClassName;
+        // items[oldNext].className = itemClassName;
 
         // Add the new classes
         items[newPrevious].className = itemClassName + " prev";
-        items[slide].className = itemClassName + " active";
         items[newNext].className = itemClassName + " next";
+        items[slide].className = itemClassName + " active";
       }
       else {
+        console.log(newPrevious);
         if (dirNext === 1) {
           // items[slide].classList.add('notransition');
           items[slide].className = itemClassName + " next notransition";
           items[slide].offsetHeight;
           items[slide].classList.remove('notransition');
+          items[newNext].className = itemClassName;
+          items[newPrevious].className = itemClassName + " prev";
           items[slide].className = itemClassName + " active";
-          items[newNext].className = itemClassName + " prev";
         }
         else {
           // items[slide].classList.add('notransition');
           items[slide].className = itemClassName + " prev notransition";
           items[slide].offsetHeight;
           items[slide].classList.remove('notransition');
-          items[slide].className = itemClassName + " active";
+          items[newPrevious].className = itemClassName;
           items[newNext].className = itemClassName + " next";
+          items[slide].className = itemClassName + " active";
         }
 
       }
