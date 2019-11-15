@@ -6,11 +6,16 @@
   {% assign feature_image = collectiondata.feature_image %}
 {% endif %}
 
-{% if feature_text or feature_image %}
-  <!-- <div class="feature"{% if feature_image %} style="background-image: url({{ feature_image }})"{% endif %}>
+{% if feature_image and page.layout == 'post' %}
+  <div class="feature" style="background-image: url({{ feature_image | prepend: site.url }})">
     <div class="container  typeset">
-      {{ feature_text | markdownify }}
+    	<div class="title--box">
+		    <h1>{{ page.title }}</h1>
+	      {{ feature_text | markdownify }}
+	      {% include post-meta.html %}
+	    </div>
     </div>
-  </div> -->
-  {% include site-carousel.html %}
+  </div>
+{% elsif page.layout == 'blog' %}
+	{% include site-carousel.html %}
 {% endif %}

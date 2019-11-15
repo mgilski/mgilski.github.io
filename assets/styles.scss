@@ -26,10 +26,22 @@ article, .nav--paginator {
 .article.article--post {
 	margin-bottom: 1rem;
 }
+.item--post img {
+	margin: 0;
+}
 
 .logo {
 	margin-top: 0.2rem;
 	margin-bottom: 0.2rem;
+}
+
+.title--box {
+	background-color: rgba(255, 255, 255, 0.75);
+	padding: 1rem;
+	width: 100%;
+	*, h1 {
+		color: $bodyColour;	
+	}
 }
 
 

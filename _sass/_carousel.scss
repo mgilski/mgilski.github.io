@@ -26,7 +26,7 @@
 
 /* By default we're hiding items (except the initial one) until the JS initiates. Elements are absolutely positioned with a width of 100% (as we're styling for mobile first), letting the content's height dictate the height of the carousel. Our magic property here for all our animation needs is 'transition', taking the properties we wish to animate 'transform' and 'opacity', along with the length of time in seconds. */
 .carousel__photo {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   top: 0;
   left: 0;
@@ -36,7 +36,7 @@
   width: 100%;
   padding: 0 0;
   z-index: 100;
-  transition: transform .5s, opacity .5s, z-index .5s;
+  transition: transform .35s;
   // max-height: 25rem;
 }
 
@@ -100,6 +100,7 @@
   height: 10px;
   top: 33%;
   left: 50%;
+  opacity: .7;
   // border-right: 2px solid black;
   // border-bottom: 2px solid black;
   transform: scaleX(-1);
