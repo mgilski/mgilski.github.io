@@ -4,7 +4,7 @@
       {% for page in paginator.posts %}
         <li class="item  item--post">
           {% if page.feature_image %}
-            <img src="{{ page.feature_image | prepend: site.url}}">
+            <img class="preview--image" src="{{ page.feature_image | prepend: site.url}}">
           {% endif %}
           <article class="article  article--post">
             <div>

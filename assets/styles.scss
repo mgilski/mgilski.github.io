@@ -26,8 +26,8 @@ article, .nav--paginator {
 .article.article--post {
 	margin-bottom: 1rem;
 }
-.item--post img {
-	margin: 0;
+.item--post {
+	line-height: 0;
 }
 
 .logo {
@@ -42,6 +42,12 @@ article, .nav--paginator {
 	*, h1 {
 		color: $bodyColour;	
 	}
+}
+
+.about--description {
+	min-width: 200px;
+	padding: 0 1rem;
+	@include flex(0 1 auto);
 }
 
 
@@ -84,3 +90,4 @@ article, .nav--paginator {
 		padding: 0 0.4rem;
 	}
 }
+
