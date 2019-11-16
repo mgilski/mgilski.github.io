@@ -159,31 +159,86 @@ body {
 }
 
 .aside {
-  .section {
-    display: flex;
-    position: relative;
-    @include flex-direction(row);
-    height: 14rem;
-    align-items: center;
-    padding-right: 1rem;
-    background-color: $paletteTile;
-    z-index: 0;
+  $veryNarrowWidth: 18rem;
+  $narrowWidth: 14rem;
+  $wideWidth: 14rem;
+  $imageMargin: 0.5rem;
 
-    .nav--social {
-      @include flex(0);
+  width: $veryNarrowWidth;
+  margin: auto;
+
+  .section {
+      position: sticky;
+      top: 0;
+      display: block;
+      height: auto;
+      padding-right: 0;
+      padding-bottom: 1rem;
+      margin-top: 0;
+      background-color: $paletteTile;
+      z-index: 0;
+
+      .nav--social {
+        text-align: center;
+      }
     }
-  }
-  .cover {
-      width: 7.5rem;
+    .cover {
+      height: $veryNarrowWidth/2 + $imageMargin;
+      width: 100%;
+      position: absolute;
+      background-color: $paletteBackground;
+      z-index: 100;
+    }
+  // .section {
+  //   display: flex;
+  //   position: relative;
+  //   @include flex-direction(row);
+  //   height: $narrowWidth;
+  //   align-items: center;
+  //   padding-right: 1rem;
+  //   margin-top: 1rem;
+  //   background-color: $paletteTile;
+  //   z-index: 0;
+
+  //   .nav--social {
+  //     @include flex(0);
+  //   }
+  // }
+  // .cover {
+  //     width: $narrowWidth/2;
+  //     height: 100%;
+  //     position: absolute;
+  //     background-color: $paletteBackground;
+  //     z-index: 100;
+  //   }
+
+  @include breakpoint(550) {
+    height: $narrowWidth;
+    width: 100%;
+    margin: 0;
+    .section {
+      display: flex;
+      position: relative;
+      @include flex-direction(row);
+      height: $narrowWidth;
+      align-items: center;
+      padding-right: 1rem;
+      margin-top: 1rem;
+      padding-bottom: 0;
+    }
+
+    .cover {
+      width: $narrowWidth/2;
       height: 100%;
       position: absolute;
       background-color: $paletteBackground;
       z-index: 100;
     }
+  }
 
   
   @include breakpoint(break-3) {
-    width: 15.5rem;
+    width: $wideWidth;
     margin-left: 4%;
     
     // opacity: 0.5;
@@ -195,16 +250,17 @@ body {
       height: auto;
       padding-right: 0;
       padding-bottom: 1rem;
+      margin-top: 0;
 
       .nav--social {
         text-align: center;
       }
     }
     .about--image {
-      margin-top: 0.5rem;
+      margin-top: $imageMargin;
     }
     .cover {
-      height: 8.35rem;
+      height: $wideWidth/2 + $imageMargin;
       width: 100%;
       position: absolute;
       background-color: $paletteBackground;

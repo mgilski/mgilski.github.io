@@ -45,9 +45,10 @@ article, .nav--paginator {
 }
 
 .about--description {
-	min-width: 200px;
-	padding: 0 1rem;
-	@include flex(0 1 auto);
+  min-width: 200px;
+  padding: 0 1rem;
+  // margin-bottom: 0 !important;
+  @include flex(0 1 auto);
 }
 
 
