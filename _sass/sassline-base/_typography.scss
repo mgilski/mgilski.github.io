@@ -36,18 +36,18 @@ a {
 
   // Nice underlines for text links.
   p a, li a {
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$linkColour 50%);
-    background-position: 0 93%;
-    background-repeat: repeat-x;
-    background-size: 100% 0.15rem;
+    // background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$linkColour 50%);
+    // background-position: 0 93%;
+    // background-repeat: repeat-x;
+    // background-size: 100% 0.15rem;
     // text-shadow: 0.1rem 0 $backgroundColour,
     //              0.15rem 0 $backgroundColour,
     //             -0.1rem 0 $backgroundColour,
     //             -0.15rem 0 $backgroundColour;
 
-    &:hover, &:active, &:focus {
-      background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$hoverColour 50%);
-    }
+    // &:hover, &:active, &:focus {
+    //   background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$hoverColour 50%);
+    // }
   }
 
   // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
@@ -73,12 +73,12 @@ a {
 
   // Heading level 2.
   h2, .beta {
-    @include sassline(beta, $headingtype, 3, 1, all);
+    @include sassline(beta, $headingtype, 2.5, 1, all);
   }
 
   // Heading level 3.
   h3, .gamma {
-    @include sassline(gamma, $headingtype, 3, 1, all);
+    @include sassline(gamma, $headingtype, 2, 1, all);
   }
 
   // Heading level 4.
