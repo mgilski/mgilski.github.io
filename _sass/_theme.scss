@@ -212,7 +212,7 @@ body {
   //     z-index: 100;
   //   }
 
-  @include breakpoint(550) {
+  @include breakpoint(580) {
     height: $narrowWidth;
     width: 100%;
     margin: 0;
