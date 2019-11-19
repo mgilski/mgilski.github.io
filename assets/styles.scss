@@ -83,7 +83,7 @@ article, .nav--paginator {
 		-webkit-box-shadow: none;
 		-moz-box-shadow: none;
 		box-shadow: none;
-  
+
 		outline: 1.5rem solid white;
 		text-align: center;
 		position: absolute;
@@ -177,11 +177,8 @@ article, .nav--paginator {
 	    align-items: center;
 	    height: 100%;
 	    display: inline-flex;
-	    &.item--current, &:hover {
+	    &.item--current {
 	    	background: $paletteFocus;
-	    	& a {
-	    		color: $backgroundColour;
-	    	}
 	    }
 	}
 

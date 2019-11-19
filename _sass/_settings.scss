@@ -9,13 +9,16 @@
 // $paletteBackground: rgba(238, 222, 177, 1);
 // $paletteFocus: rgba(108, 174, 117, 1);
 // $paletteLink: rgba(139, 189, 139, 1);
+$borderColor: hsl(174, 41%, 38%);
 
-$paletteDark: #858ec6;
-$paletteTile: #858ec6;
+$paletteDark: $borderColor;
+$paletteTile: $borderColor;
 $paletteBackground: white;
-$paletteFocus: #7286A0;
-$paletteLink: #858ec6;
-$paletteAccent: #E39774;
+$paletteFocus: hsl(174, 15%, 38%);
+$paletteLink: $borderColor;
+// $paletteAccent: #ffb340;
+// $paletteAccent: #8FC93A;
+$paletteAccent: hsla(44, 83%, 66%, 1);
 
 
 // Background colours
