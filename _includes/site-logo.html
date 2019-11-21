@@ -1,5 +1,6 @@
 <a class="logo" href="{{ site.baseurl }}/">
-  <img src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title | append: ' logo' }}"/>
+  {% include site-logo-svg.html %}
+
   <div id="logo-title">
     <span>{{ site.title }}</span>    	
   </div>

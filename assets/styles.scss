@@ -9,9 +9,9 @@ styles: true
 #logo-title {
 	margin-right: auto;
 	span {
-		color: black;
+		color: $paletteBackground;
 		&:hover, &:active, &:focus {
-			color: black;
+			color: $paletteBackground;
 			text-decoration: none;
 		}
 	}
@@ -21,6 +21,15 @@ article, .nav--paginator {
 	padding: 0.5rem 1.5rem;
 	margin-bottom: 0.5rem;
 	background-color: $paletteBackground;
+}
+
+header {
+	margin-bottom: 1rem;
+	background-color: $paletteTile;
+	color: $paletteBackground;
+	.container svg {
+		fill: $paletteBackground;
+	}
 }
 
 .article.article--post {
@@ -55,6 +64,8 @@ article, .nav--paginator {
 
 	p {
 		margin-bottom: 1.5rem;
+		text-align: justify;
+		text-justify: inter-word;
 		margin-top: 1.5rem;
 		position: relative;
 		z-index: 100;
@@ -162,6 +173,12 @@ article, .nav--paginator {
 		height: 100%;
 		position: absolute;
 		width: 100%;
+		a {
+			color: $paletteBackground;
+			&:hover {
+				color: LightGray;
+			}
+		}
 	}
 
 	.logo img {
@@ -177,8 +194,9 @@ article, .nav--paginator {
 	    align-items: center;
 	    height: 100%;
 	    display: inline-flex;
-	    &.item--current {
-	    	background: $paletteFocus;
+	    &.item--current a {
+	    	height: 2.4em;
+	    	border-bottom: 4px solid $paletteAccent;
 	    }
 	}
 

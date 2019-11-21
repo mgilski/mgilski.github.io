@@ -4,7 +4,7 @@ categories:
 - History
 feature_text: |
   The History of the Alembic tool
-feature_image: "/assets/images/test_image.jpg"
+feature_image: "/assets/images/test3.jpg"
 ---
 
 Dioscorides' ambix (described in his De materia medica) is a helmet-shaped lid for gathering condensed mercury. For Athenaeus (~ 225 C.E.) it is a bottle or flask. For later chemists it denotes various parts of crude distillation devices.
