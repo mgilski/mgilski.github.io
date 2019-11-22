@@ -5,7 +5,8 @@
       totalItems = items.length,
       slide = 0,
       moving = true,
-      x0 = null; 
+      x0 = null,
+      y0 = null;
 
   // To initialise the carousel we'll want to update the DOM with our own classes
   function setInitialClasses() {
@@ -19,16 +20,26 @@
 
   function unify(e) { return e.changedTouches ? e.changedTouches[0] : e };
 
-  function lock(e) { x0 = unify(e).clientX };
+  function lock(e) {
+    var unified = unify(e);
+    x0 = unified.clientX;
+    y0 = unified.clientY;
+  };
 
   function move(e) {
     if(x0 || x0 === 0) {
-      let dx = unify(e).clientX - x0, s = Math.sign(dx);
-    
-      if(s > 0) { movePrev(); }
-      else if(s < 0) { moveNext(); }
+      let unified = unify(e);
+      let dx = unified.clientX - x0, s = Math.sign(dx);
+      let dy = unified.clientY - y0;
+
+      if (Math.abs(dx) > Math.abs(dy))
+      {
+        if (s > 0) { movePrev(); }
+        else if (s < 0) { moveNext(); }
+      }
     
       x0 = null;
+      y0 = null;
     }
   };
 
@@ -48,8 +59,7 @@
       img.addEventListener('touchstart', lock, false);
 
       img.addEventListener('mouseup', move, false);
-      img.addEventListener('touchend', move, false);
-      img.addEventListener('touchmove', e => {e.preventDefault()}, false);      
+      img.addEventListener('touchend', move, false);      
     }
   }
 
@@ -79,7 +89,6 @@
           newNext = (slide + 1) % totalItems,
           oldPrevious = mod(slide - 2, totalItems),
           oldNext = (slide + 2) % totalItems;
-          console.log(slide);
 
       // Test if carousel has more than three items
       if (false/*totalItems  > 2*/) {
@@ -117,7 +126,6 @@
         items[slide].className = itemClassName + " active";
       }
       else {
-        console.log(newPrevious);
         if (dirNext === 1) {
           // items[slide].classList.add('notransition');
           items[slide].className = itemClassName + " next notransition";
