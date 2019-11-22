@@ -6,14 +6,14 @@
           {% if page.feature_image %}
             <img class="preview--image" src="{{ page.feature_image | prepend: site.url}}">
           {% endif %}
-          <article class="article  article--post">
+          <article class="article  article--post list">
             <div class="postlist--cover"></div>
             <div>
               <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
               {% include post-date.html %}
               {{ page.excerpt | markdownify | truncatewords: 60 }}
             </div>
-            <a class="button" href="{{ site.baseurl }}{{ page.url }}">Czytaj&nbsp;dalej!</a>
+            <a class="button more" href="{{ site.baseurl }}{{ page.url }}">Czytaj&nbsp;dalej!</a>
 
           </article>
         </li>

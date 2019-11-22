@@ -31,6 +31,8 @@
   position: absolute;
   top: 0;
   left: 0;
+  background-size: cover;
+  background-position: center;
   // display: block;
   // margin-left: auto;
   // margin-right: auto;
@@ -69,7 +71,8 @@
 .carousel__button--prev,
 .carousel__button--next {
   position: absolute;
-  top:50%;
+  top: 50%;
+  margin-top: 1em;
   width: 5rem;
   height: 5rem;
   // background-color: #FFF;
@@ -95,20 +98,27 @@
 .carousel__button--next::after {
   content: "▷";
   color: white;
-  font-size: xx-large;
+  font-size: large;
+  left: 22%;
+  @include breakpoint(break-1) {
+    font-size: xx-large;
+    left: 50%;
+  }
   position: absolute;
   width: 10px;
   height: 10px;
   top: 33%;
-  left: 50%;
-  opacity: .7;
+  opacity: .6;
   // border-right: 2px solid black;
   // border-bottom: 2px solid black;
   transform: scaleX(-1);
 }
 
 .carousel__button--next::after {
-  left: 45%;
+  left: 66%;
+  @include breakpoint(break-1) {
+    left: 45%;
+  }
   transform: none;
   // transform: translate(-50%, -50%);
 }

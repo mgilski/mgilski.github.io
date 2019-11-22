@@ -1,0 +1,30 @@
+  <div class="carousel-wrapper">
+    <div class="carousel">
+      {% assign imgs = include.images | split: ", " %}
+
+      {% if imgs[1] %}
+        <img class="carousel__photo initial" src="{{ imgs[0] }}">
+        {% for img in imgs offset:1 %}
+          <img class="carousel__photo" src="{{ img }}">
+        {% endfor %}
+        <div class="carousel__button--next"></div>
+        <div class="carousel__button--prev"></div>
+      {% else %}
+        <img src="{{ imgs[0] }}">
+      {% endif %}
+
+      <!-- <img class="carousel__photo initial" src="https://placekitten.com/1600/533">
+      <img class="carousel__photo" src="https://placekitten.com/g/1600/533">
+      <img class="carousel__photo" src="https://placekitten.com/1600/533">
+      <img class="carousel__photo" src="https://placekitten.com/g/1600/533">
+      <img class="carousel__photo" src="https://placekitten.com/1600/533">
+      <img class="carousel__photo" src="https://placekitten.com/g/1600/533"> -->
+      <!-- <img class="carousel__photo" src="https://images.pexels.com/photos/320014/pexels-photo-320014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"> -->
+      <!-- <img class="carousel__photo" src="https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"> -->
+      
+
+      
+      
+
+    </div>
+  </div>

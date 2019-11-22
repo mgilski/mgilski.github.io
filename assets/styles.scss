@@ -38,12 +38,14 @@ header {
 	margin-bottom: 1.5rem;
 	text-align: center;
     position: relative;
-    width: 85%;
     margin: auto;
     margin-top: -$overlap;
 	margin-bottom: 3rem;
     border: 1px solid $paletteTile;
-
+    width: 97%;
+    @include breakpoint(break-1) {
+	    width: 85%;
+    }
 
 	.postlist--cover {
 		position: absolute;
@@ -83,12 +85,18 @@ header {
 		}
 	}
 
+	&.content p {
+		&:after {
+			content: none;
+		}
+	}
+
 	h2 {
 		z-index: 100;
 		position: relative;
 	}
 
-	a.button {
+	a.button.more {
 		$width: 7rem;
 
 		-webkit-box-shadow: none;
@@ -159,6 +167,17 @@ header {
   }
 }
 
+
+.carousel__photo {
+	height: 33vh;
+	@include breakpoint(break-2) {
+		height: 33vw;
+	}
+}
+
+.carousel img {
+	height: auto;
+}
 
 
 
