@@ -59,6 +59,7 @@ header {
 		top: 0;
 		left: 0;
 		outline: 2px solid #fff;
+		border: 2px solid #fff;
 		z-index: 0;
 	}
 
@@ -88,6 +89,15 @@ header {
 		    top: -1.4rem;
 		    margin-left: -$dashWidth/2;
 		}
+	}
+
+	&.list {
+		border: 1px solid $paletteTile;
+	    width: 85%;
+	    margin-top: -$overlap;
+	    strong {
+	    	font-weight: normal;
+	    }
 	}
 
 	&.content p {
