@@ -108,11 +108,11 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
 
 # 9. Site navigation
 navigation_header:
-- title: Posty
+- title: POSTY
   url: /
-- title: O nas
+- title: O NAS
   url: /categories/
-- title: Szukaj
+- title: SZUKAJ
   url: /search/
 
 navigation_footer:
