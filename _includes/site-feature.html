@@ -9,11 +9,9 @@
 {% if feature_image and page.layout == 'post' %}
   <div class="feature" style="background-image: url({{ feature_image | prepend: site.url }})">
     <div class="container  typeset">
-    	<div class="title--box">
-		    <h1>{{ page.title }}</h1>
-	      {{ feature_text | markdownify }}
+		    <h1>{{ page.title }}</h1><br>
+	      <!-- {{ feature_text | markdownify }} -->
 	      {% include post-meta.html %}
-	    </div>
     </div>
   </div>
 {% elsif page.layout == 'blog' %}

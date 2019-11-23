@@ -91,6 +91,7 @@ header {
 	}
 
 	&.content p {
+		margin-top: 0;
 		&:after {
 			content: none;
 		}
@@ -138,15 +139,6 @@ header {
 .logo {
 	margin-top: 0.2rem;
 	margin-bottom: 0.2rem;
-}
-
-.title--box {
-	background-color: rgba(255, 255, 255, 0.75);
-	padding: 1rem;
-	width: 100%;
-	*, h1 {
-		color: $bodyColour;	
-	}
 }
 
 .about--description {

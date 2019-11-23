@@ -57,9 +57,65 @@ body {
   background-position: center;
   .container {
     min-height: 33vw;
-    max-width: 30%;
     @include flex-direction(column);
     @include justify-content(center);
+    width: 75%;
+    text-transform: uppercase;
+    small {
+      margin-bottom: 4rem;   
+      position: relative;
+      z-index: 100;
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(0,0,0,0.17);
+        -webkit-box-shadow: 0px 0px 50px 9px rgba(0,0,0,0.27); 
+        box-shadow: 0px 0px 50px 9px rgba(0,0,0,0.27);
+        position: absolute;
+        z-index: -1;
+      }
+    }
+    *, h1 {
+      color: $paletteBackground;  
+    }
+    h1 {
+      font-size: 300%;
+      font-weight: 800;
+      line-height: 4.5rem;
+      position: relative;
+      z-index: 100;
+      &:before {
+        $dashWidth: 5rem;
+        content: '\A—';
+        font-weight: 600;
+        color: $paletteAccent;
+        position: absolute;
+        font-size: 115%;
+        transform: scaleX(1.2);
+        text-align: center;
+        width: $dashWidth;
+        left: 50%;
+        bottom: -0.8em;
+        margin-left: -$dashWidth/2;
+        z-index: 100;
+      }
+      &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(0,0,0,0.17);
+        -webkit-box-shadow: 0px 0px 50px 9px rgba(0,0,0,0.27); 
+        box-shadow: 0px 0px 50px 9px rgba(0,0,0,0.27);
+        position: absolute;
+        z-index: -1;
+      }
+    }
+
   }
 }
 
