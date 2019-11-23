@@ -65,26 +65,21 @@ body {
       margin-bottom: 4rem;   
       position: relative;
       z-index: 100;
-      &:before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background-color: rgba(0,0,0,0.17);
-        -webkit-box-shadow: 0px 0px 50px 9px rgba(0,0,0,0.27); 
-        box-shadow: 0px 0px 50px 9px rgba(0,0,0,0.27);
-        position: absolute;
-        z-index: -1;
-      }
+      text-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
     }
     *, h1 {
       color: $paletteBackground;  
     }
     h1 {
-      font-size: 300%;
-      font-weight: 800;
-      line-height: 4.5rem;
+      font-size: 200%;
+      line-height: 3rem;
+      text-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
+      @include breakpoint(break-1) {
+        font-size: 300%;
+        line-height: 4.5rem;
+
+      }
+      font-weight: 600;
       position: relative;
       z-index: 100;
       &:before {
@@ -93,26 +88,20 @@ body {
         font-weight: 600;
         color: $paletteAccent;
         position: absolute;
-        font-size: 115%;
-        transform: scaleX(1.2);
+        font-size: 100%;
+        transform: scaleX(1.5);
         text-align: center;
         width: $dashWidth;
         left: 50%;
-        bottom: -0.8em;
+        bottom: -1.1em;
         margin-left: -$dashWidth/2;
         z-index: 100;
-      }
-      &:after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background-color: rgba(0,0,0,0.17);
-        -webkit-box-shadow: 0px 0px 50px 9px rgba(0,0,0,0.27); 
-        box-shadow: 0px 0px 50px 9px rgba(0,0,0,0.27);
-        position: absolute;
-        z-index: -1;
+        @include breakpoint(break-1)
+        {
+          font-size: 115%;
+          transform: scaleX(1.2);
+          bottom: -0.8em;
+        }
       }
     }
 
@@ -467,14 +456,14 @@ button,
     display: none;
   }
   background: none;
-  color: $linkColour;
+  color: $paletteLink;
   margin-bottom: 0;
   min-height: 4rem;
   min-width: 4rem;
   &:hover,
   &:focus {
     box-shadow: none;
-    color: $hoverColour;
+    color: $paletteLink;
   }
 }
 

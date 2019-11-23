@@ -9,9 +9,9 @@ styles: true
 #logo-title {
 	margin-right: auto;
 	span {
-		color: $paletteBackground;
+		color: $paletteLink;
 		&:hover, &:active, &:focus {
-			color: $paletteBackground;
+			color: $paletteLink;
 			text-decoration: none;
 		}
 	}
@@ -28,10 +28,10 @@ article, .nav--paginator {
 
 header {
 	margin-bottom: 1rem;
-	background-color: $paletteTile;
-	color: $paletteBackground;
+	background-color: $paletteBackground;
+	color: $paletteTile;
 	.container svg {
-		fill: $paletteBackground;
+		fill: $paletteTile;
 	}
 }
 
@@ -92,6 +92,7 @@ header {
 
 	&.content p {
 		margin-top: 0;
+		font-weight: normal;
 		&:after {
 			content: none;
 		}
@@ -192,6 +193,12 @@ header {
 }
 
 
+.header .nav a {
+	color: $paletteLink;
+	&:hover {
+		// color: LightGray;
+	}
+}
 
 @include breakpoint(break-1) {
 	.header .container {
@@ -204,12 +211,6 @@ header {
 		height: 100%;
 		position: absolute;
 		width: 100%;
-		a {
-			color: $paletteBackground;
-			&:hover {
-				color: LightGray;
-			}
-		}
 	}
 
 	.logo img {
