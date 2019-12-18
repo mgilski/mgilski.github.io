@@ -107,13 +107,15 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
   1024: '/assets/logos/logo@1024px.png'
 
 # 9. Site navigation
-navigation_header:
-- title: POSTY
-  url: /
-- title: O NAS
-  url: /categories/
-- title: SZUKAJ
-  url: /search/
+# navigation_header:
+# - title: POSTY
+#   url: /
+# - title: KRAJE
+#   url: /categories/
+# - title: O NAS
+#   url: /categories/
+# - title: SZUKAJ
+#   url: /search/
 
 navigation_footer:
 - title: Created by David Darnes

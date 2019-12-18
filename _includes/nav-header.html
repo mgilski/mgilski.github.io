@@ -1,7 +1,7 @@
-{% if site.navigation_header %}
+{% if site.data.navigation_header %}
 <nav class="nav  nav--header">
-  <ul class="nav--top list  list--nav">
-    {% for item in site.navigation_header %}
+  <ul class="nav--top list  list--nav dropdown0">
+    {% for item in site.data.navigation_header %}
 
       {% if item.url contains '://' %}
         {% assign url = item.url %}
@@ -11,6 +11,21 @@
 
       <li class="item  item--nav{% if item.url == page.url %}  item--current{% endif %}">
         <a href="{{ url }}">{{ item.title }}</a>
+        {% if item.members %}
+          <ul class="dropdown1">
+            {% for level1 in item.members %}
+              <li><a href="{{ url }}">{{ level1.title }}</a>
+              {% if level1.members %}
+                <ul class="dropdown2">
+                  {% for level2 in level1.members %}
+                    <li><a href="{{ url }}">{{ level2.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>

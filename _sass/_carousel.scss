@@ -87,11 +87,17 @@
 }
 
 .carousel__button--prev {
-  left:0;
+  left: 15px;
+  @include breakpoint(break-1) {
+    left: 0;
+  }
 }
 
 .carousel__button--next {
-  right:0;
+  right: 15px;
+  @include breakpoint(break-1) {
+    right: 0;
+  }
 }
 
 /* Use pseudo elements to insert arrows inside of navigation buttons */

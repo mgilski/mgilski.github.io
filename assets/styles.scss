@@ -178,6 +178,7 @@ header {
   }
 }
 
+///////  CAROUSEL /////////
 
 .carousel__photo {
 	height: 33vh;
@@ -206,12 +207,19 @@ header {
 }
 
 
-.header .nav a {
-	color: $paletteLink;
-	&:hover {
-		// color: LightGray;
+.header {
+	// .nav a {
+	// 	color: $paletteLink;
+	// 	&:hover {
+	// 		// color: LightGray;
+	// 	}
+	// }
+	.container {
+		height: 4.5em;
 	}
 }
+
+$navWidth: 5em;
 
 @include breakpoint(break-1) {
 	.header .container {
@@ -222,7 +230,6 @@ header {
 	.header .nav {
 		right: 0px;
 		height: 100%;
-		position: absolute;
 		width: 100%;
 	}
 
@@ -239,15 +246,96 @@ header {
 	    align-items: center;
 	    height: 100%;
 	    display: inline-flex;
+	    margin: 0;
+		width: $navWidth;
 	    &.item--current a {
 	    	height: 2.4em;
 	    	border-bottom: 4px solid $paletteAccent;
 	    }
-	}
-
-	.header li.item.item--nav {
-		margin: 0;
-		padding: 0 0.4rem;
+	    a {
+	    	margin: auto;
+	    }
 	}
 }
 
+
+////////  DROPDOWN //////////
+
+* {
+	$width: 12rem;
+	.dropdown1, .dropdown2 {
+		// display: none;
+		top: 100%;
+		z-index: 1000;
+		background-color: $paletteFocus;
+		width: $width;
+		margin-left: -$width/2;
+		text-align: center;
+		a {
+			color: $paletteBackground;
+			display: block;
+		}
+		li {
+			border-left: 3px solid rgba(0, 0, 0, 0);
+		}
+	}
+
+	.dropdown0 {
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	    overflow: visible;
+	}
+
+	.dropdown0 > li {
+	    position: relative;
+	}
+
+	.dropdown1 {
+	    position: absolute;
+	    left: -50%;
+	    width: $width;
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	    display: none;
+	}
+
+	.dropdown1 > li {
+	    position: relative;
+	    // height: 30px;
+	}
+
+	.dropdown1 > li:hover, .dropdown2 > li:hover {
+		background: $paletteTile;
+		border-left: 3px solid $paletteAccent;
+	}
+
+	.dropdown2 {
+	    position: absolute;
+	    top: 0;
+	    right: -$width;
+	    width: $width;
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	    display: none;
+	}
+
+	.dropdown2 > li {
+	    // height: 30px;
+	}
+
+	.dropdown0 a /* Apply to all links inside the multi-level menu */
+	{
+	    /* Make the link cover the entire list item-container */
+	    display: block;
+	    line-height: 30px;
+	}
+
+	.dropdown0 li:hover > ul
+	{
+	    /* On hover, display the next level's menu */
+	    display: inline;
+	}
+}
