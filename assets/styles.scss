@@ -216,10 +216,11 @@ header {
 	// }
 	.container {
 		height: 4.5em;
+		width: 97%;
 	}
 }
 
-$navWidth: 5em;
+$navWidth: 6.5em;
 
 @include breakpoint(break-1) {
 	.header .container {
@@ -246,8 +247,8 @@ $navWidth: 5em;
 	    align-items: center;
 	    height: 100%;
 	    display: inline-flex;
-	    margin: 0;
-		width: $navWidth;
+	    margin-left: 2em;
+		// width: $navWidth;
 	    &.item--current a {
 	    	height: 2.4em;
 	    	border-bottom: 4px solid $paletteAccent;
@@ -267,17 +268,20 @@ $navWidth: 5em;
 		// display: none;
 		top: 100%;
 		z-index: 1000;
-		background-color: $paletteFocus;
+		background-color: $paletteBackground;
 		width: $width;
 		margin-left: -$width/2;
 		text-align: center;
 		a {
-			color: $paletteBackground;
+			color: $paletteTile;
 			display: block;
+			b {
+				font-weight: bold;
+			}
 		}
-		li {
-			border-left: 3px solid rgba(0, 0, 0, 0);
-		}
+		// li {
+		// 	border-left: 3px solid rgba(0, 0, 0, 0);
+		// }
 	}
 
 	.dropdown0 {
@@ -293,14 +297,28 @@ $navWidth: 5em;
 
 	.dropdown1 {
 	    position: absolute;
-	    left: -50%;
+	    margin: 0;
+        left: 50%;
+	    margin-left: -$width/2;
 	    width: $width;
 	    list-style: none;
 	    padding: 0;
-	    margin: 0;
+	    border-top: 3px solid $paletteTile;
 	    display: none;
 	}
 
+	.dropdown1:after {
+		content: '▲';
+		position: absolute;
+		color: $paletteTile;
+		width: 26px;
+	    left: 50%;
+	    margin-left: -13px;
+	    transform: scale(2, 1);
+	    top: -1.4em;
+	}
+
+	
 	.dropdown1 > li {
 	    position: relative;
 	    // height: 30px;
@@ -308,7 +326,10 @@ $navWidth: 5em;
 
 	.dropdown1 > li:hover, .dropdown2 > li:hover {
 		background: $paletteTile;
-		border-left: 3px solid $paletteAccent;
+		// border-left: 3px solid $paletteAccent;
+		& > a {
+			color: $paletteBackground;
+		}
 	}
 
 	.dropdown2 {

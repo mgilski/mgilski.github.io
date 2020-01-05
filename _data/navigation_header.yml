@@ -1,4 +1,4 @@
-- title: POSTY
+- title: AKTUALNOŚCI
   url: /
   members:
 - title: KRAJE
@@ -12,9 +12,15 @@
     - title: Afryka
       members:
         - title: Egipt
+- title: ARTYKUŁY
+  url: /tips/
+  members:
+    - title: Praktycznie
+    - title: Przemyślenia
+
 - title: O NAS
   url: /about-us/
   members:
-- title: SZUKAJ
+- title: "<span style='font-size: 150%'>⌕</span>"
   url: /search/
   members:

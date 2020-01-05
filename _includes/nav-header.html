@@ -14,7 +14,7 @@
         {% if item.members %}
           <ul class="dropdown1">
             {% for level1 in item.members %}
-              <li><a href="{{ url }}">{{ level1.title }}</a>
+              <li><a href="{{ url }}">{{ level1.title }}{% if level1.members %} <b>›</b>{% endif %}</a>
               {% if level1.members %}
                 <ul class="dropdown2">
                   {% for level2 in level1.members %}
@@ -44,8 +44,8 @@
 
   // Hide nav and apply toggle
   const collapseNav = () => {
-    if (document.body.clientWidth < 640) {
-      navList.style.setProperty('--listHeight', `-${navList.offsetHeight}px`)
+    if (window.innerWidth < 800) {
+      navList.style.setProperty('display', 'none')
     } else {
       navList.removeAttribute('style')
     }
