@@ -217,6 +217,7 @@ header {
 	.container {
 		height: 4.5em;
 		width: 97%;
+		position: relative;
 	}
 }
 
@@ -266,7 +267,7 @@ $navWidth: 6.5em;
 	$width: 12rem;
 	.dropdown1, .dropdown2 {
 		// display: none;
-		top: 100%;
+		top: 98%;
 		z-index: 1000;
 		background-color: $paletteBackground;
 		width: $width;
@@ -359,4 +360,126 @@ $navWidth: 6.5em;
 	    /* On hover, display the next level's menu */
 	    display: inline;
 	}
+
+	.nav--header label,
+	.nav--header input {
+		display: none;
+	}
+}
+
+
+////////  DROPDOWN MOBILE //////////
+
+@include breakpoint(0, 800) {
+	$width: 10em;
+
+	nav.nav--header {
+		position: absolute;
+		width: 100%;
+		text-align: left;
+	}
+
+	.button--nav {
+		display: block;
+		top: 1.5em;
+		right:1.5em;
+	}
+
+	ul.nav--top {
+		position: absolute;
+		left: 0;
+		top: 5.5rem;
+		width: 100%;
+		text-align: left;
+		border-top: 3px solid $paletteTile;
+		padding-top: 0.3rem
+	}
+
+	ul.nav--top:after {
+		content: '▲';
+		position: absolute;
+		color: $paletteTile;
+		width: 26px;
+	    right: 1.4em;
+	    transform: scale(2, 1);
+	    top: -1.4em;
+	}
+
+	label.button + input {
+		display: block;
+	}
+
+	.dropdown0 {
+
+		.dropdown1, .dropdown2 {
+		    position: relative;
+		    margin: 0;
+	        left: 0;
+		    width: $width;
+		    list-style: none;
+		    padding: 0;
+		    border-top: none;
+		    // display: none;
+		}
+
+		li:hover, li:hover {
+			background: $paletteTile;
+			// border-left: 3px solid $paletteAccent;
+			& > a, & > label {
+				color: $paletteBackground;
+			}
+		}
+
+		li {
+			display: block !important;
+			height: auto !important;
+			padding-left: 1rem;
+			width: 100%;
+		}
+
+		ul {
+			width: 100% !important;
+		}
+
+		.dropdown1:after {
+			content: none;
+		}
+
+		a.expand,
+		ul {
+			display: none;
+		}
+
+		li:hover > ul
+		{
+		    display: none;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 0;
+			padding-top: 0;
+			line-height: 30px;
+			padding: 0.2rem;
+			b {
+				float: right;
+				margin-right: 1rem;
+				transform: rotate(90deg);
+				font-size: 150%;
+			}
+		}
+
+		a, label {
+			font-size: 120%;
+		}
+
+
+		[id^=drop]:checked + ul {
+			display: block;
+		}
+	}
+	// label.button + input:checked + ul {
+	// 	display: block;
+	// }
+
 }
