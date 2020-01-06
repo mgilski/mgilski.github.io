@@ -426,6 +426,12 @@ $navWidth: 6.5em;
 		    // display: none;
 		}
 
+		a {
+			padding: 0;
+			line-height: 33px;
+			display: initial;
+		}
+
 		li:hover, li:hover {
 			background: $paletteBackground;
 			// border-left: 3px solid $paletteAccent;
@@ -438,10 +444,14 @@ $navWidth: 6.5em;
 			display: block !important;
 			height: auto !important;
 			width: 100%;
+			text-align: left;
 			a, label {
 				cursor: pointer;
+				padding: 0.2rem;
 				padding-left: 1rem;
-				text-align: left;
+			}
+			label > a {
+				padding: 0;
 			}
 		}
 
@@ -450,11 +460,19 @@ $navWidth: 6.5em;
 				padding-left: 3rem;
 				padding-right: 2rem;
 			}
+
+			label > a {
+				padding: 0;
+			}
 		}
 
 		.dropdown2 > li {
 			a, label {
 				padding-left: 5rem;
+			}
+
+			label > a {
+				padding: 0;
 			}
 		}
 
@@ -481,16 +499,16 @@ $navWidth: 6.5em;
 			margin-bottom: 0;
 			padding-top: 0;
 			line-height: 30px;
-			padding: 0.2rem;
 			b {
 				float: right;
 				margin-right: 1rem;
 				font-size: 150%;
+				transform: rotate(90deg);
 				transition-duration: 0.15s;
 			}
 		}
 
-		a, label {
+		a, label > a {
 			font-size: 120%;
 		}
 
@@ -500,7 +518,7 @@ $navWidth: 6.5em;
 		}
 
 		[id^=drop]:checked + label b {
-			transform: rotate(90deg);
+			transform: rotate(-90deg);
 			// transform-origin: center 35%;
 			transition-duration: 0.15s;
 		}

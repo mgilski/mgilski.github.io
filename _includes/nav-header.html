@@ -15,13 +15,12 @@
       {% else %}
         {% assign url = item.url | relative_url %}
       {% endif %}
-
       <li class="item  item--nav{% if item.url == page.url %}  item--current{% endif %}">
         <a href="{{ url }}" {% if item.members %}class="expand"{% endif %}>{{ item.title }}</a>
         {% if item.members %}
           <input id="drop--{{counter}}" type="checkbox"/>
           <label class="label" for="drop--{{counter}}">
-            {{ item.title }}{% if item.members %} <b>›</b>{% endif %}
+            <a href="{{ url }}">{{ item.title }}{% if item.members %}</a> <b>›</b>{% endif %}
           </label>
           {% assign counter = counter | plus:1 %}
           <ul class="dropdown1">
@@ -30,7 +29,7 @@
               {% if level1.members %}
                 <input id="drop--{{counter}}" type="checkbox"/>
                 <label class="label" for="drop--{{counter}}">
-                  {{ level1.title }}{% if level1.members %} <b>›</b>{% endif %}
+                  <a href="{{ url }}">{{ level1.title }}{% if level1.members %}</a> <b>›</b>{% endif %}
                 </label>
                 {% assign counter = counter | plus:1 %}
                 <ul class="dropdown2">
