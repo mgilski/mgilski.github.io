@@ -198,6 +198,7 @@ header {
 	right: 50%;
 	margin-left: -50vw;
 	margin-right: -50vw;
+	z-index: 100;
 	@include breakpoint(break-1) {
 		width: 100%;
 		margin: 0;
@@ -223,7 +224,7 @@ header {
 
 $navWidth: 6.5em;
 
-@include breakpoint(break-1) {
+@include breakpoint(break-2) {
 	.header .container {
 		padding: 0;
 		position: relative;
@@ -381,18 +382,21 @@ $navWidth: 6.5em;
 
 	.button--nav {
 		display: block;
-		top: 1.5em;
 		right:1.5em;
 	}
 
 	ul.nav--top {
 		position: absolute;
-		left: 0;
 		top: 5.5rem;
 		width: 100%;
+		@include breakpoint(break-1) {
+			width: 60%;
+		}
 		text-align: left;
 		border-top: 3px solid $paletteTile;
-		padding-top: 0.3rem
+		padding: 0.3rem;
+		background-color: $paletteBackground;
+		z-index: 200;
 	}
 
 	ul.nav--top:after {
@@ -410,7 +414,7 @@ $navWidth: 6.5em;
 	}
 
 	.dropdown0 {
-
+		box-shadow: 0 0 0 99999px rgba(0, 0, 0, .5);
 		.dropdown1, .dropdown2 {
 		    position: relative;
 		    margin: 0;
@@ -423,18 +427,35 @@ $navWidth: 6.5em;
 		}
 
 		li:hover, li:hover {
-			background: $paletteTile;
+			background: $paletteBackground;
 			// border-left: 3px solid $paletteAccent;
 			& > a, & > label {
-				color: $paletteBackground;
+				color: $paletteTile;
 			}
 		}
 
 		li {
 			display: block !important;
 			height: auto !important;
-			padding-left: 1rem;
 			width: 100%;
+			a, label {
+				cursor: pointer;
+				padding-left: 1rem;
+				text-align: left;
+			}
+		}
+
+		.dropdown1 > li {
+			a, label {
+				padding-left: 3rem;
+				padding-right: 2rem;
+			}
+		}
+
+		.dropdown2 > li {
+			a, label {
+				padding-left: 5rem;
+			}
 		}
 
 		ul {
@@ -464,8 +485,8 @@ $navWidth: 6.5em;
 			b {
 				float: right;
 				margin-right: 1rem;
-				transform: rotate(90deg);
 				font-size: 150%;
+				transition-duration: 0.15s;
 			}
 		}
 
@@ -474,8 +495,23 @@ $navWidth: 6.5em;
 		}
 
 
-		[id^=drop]:checked + ul {
+		[id^=drop]:checked + label + ul {
 			display: block;
+		}
+
+		[id^=drop]:checked + label b {
+			transform: rotate(90deg);
+			// transform-origin: center 35%;
+			transition-duration: 0.15s;
+		}
+
+		.backdrop {
+			position: fixed;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+
 		}
 	}
 	// label.button + input:checked + ul {

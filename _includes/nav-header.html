@@ -7,6 +7,7 @@
 <!--   <input id="drop--{{counter}}" type="checkbox"/>
   {% assign counter = counter | plus:1 %} -->
   <ul class="nav--top list  list--nav dropdown0">
+    <div class="backdrop" onclick="collapseNav()"></div>
     {% for item in site.data.navigation_header %}
 
       {% if item.url contains '://' %}
@@ -18,19 +19,19 @@
       <li class="item  item--nav{% if item.url == page.url %}  item--current{% endif %}">
         <a href="{{ url }}" {% if item.members %}class="expand"{% endif %}>{{ item.title }}</a>
         {% if item.members %}
+          <input id="drop--{{counter}}" type="checkbox"/>
           <label class="label" for="drop--{{counter}}">
             {{ item.title }}{% if item.members %} <b>›</b>{% endif %}
           </label>
-          <input id="drop--{{counter}}" type="checkbox"/>
           {% assign counter = counter | plus:1 %}
           <ul class="dropdown1">
             {% for level1 in item.members %}
               <li><a href="{{ url }}" {% if level1.members %}class="expand"{% endif %}>{{ level1.title }}{% if level1.members %} <b>›</b>{% endif %}</a>
               {% if level1.members %}
+                <input id="drop--{{counter}}" type="checkbox"/>
                 <label class="label" for="drop--{{counter}}">
                   {{ level1.title }}{% if level1.members %} <b>›</b>{% endif %}
                 </label>
-                <input id="drop--{{counter}}" type="checkbox"/>
                 {% assign counter = counter | plus:1 %}
                 <ul class="dropdown2">
                   {% for level2 in level1.members %}
@@ -68,12 +69,11 @@
 
     button.onclick = () => {
       navList.style.setProperty('transition', `margin .1s`)
-      if (navList.style.getPropertyValue('margin-bottom')) {
-        navList.style.removeProperty('margin-bottom')
+      if (!navUl.style.getPropertyValue('display')) {
         navUl.style.setProperty('display', 'none')
       } else {
         navUl.removeAttribute('style')
-        navList.style.setProperty('margin-bottom', `${navUl.offsetHeight + 24}px`)
+        // navList.style.setProperty('margin-bottom', `${navUl.offsetHeight + 24}px`)
       }
     }
   }

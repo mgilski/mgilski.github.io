@@ -459,9 +459,7 @@ button,
   margin-bottom: 0;
   min-height: 4rem;
   min-width: 4rem;
-  position: absolute;
-  top: 50%;
-  margin-top: -2rem;
+  position: relative;
   &:hover,
   &:focus {
     box-shadow: none;
