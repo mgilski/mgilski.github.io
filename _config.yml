@@ -26,7 +26,7 @@ exclude:
 plugins:
 - jekyll-sitemap
 - jekyll-mentions
-- jekyll-paginate
+- jekyll-paginate-v2
 - jekyll-seo-tag
 - jekyll-redirect-from
 - jekyll-default-layout
@@ -36,8 +36,11 @@ plugins:
 - jemoji
 
 # 3. Gem settings
-paginate: 10 # jekyll-paginate > items per page
-paginate_path: blog/page:num # jekyll-paginate > blog page
+# paginate: 10 # jekyll-paginate > items per page
+# paginate_path: blog/page:num # jekyll-paginate > blog page
+pagination:
+  enabled: true
+  permalink: '/page/:num/'
 jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
 twitter:
   username: DavidDarnes # jekyll-seo-tag > Owners twitter username
@@ -57,7 +60,8 @@ social: # jekyll-seo-tag > social overrides
 # 4. Jekyll settings
 sass:
   style: compressed # Style compression
-permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
+# permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
+permalink: /:year/:month/:day/:title.html
 excerpt_separator: <!-- more --> # Marks end of excerpt in posts
 timezone: Europe/London # Timezone for blog posts and alike
 
@@ -71,6 +75,9 @@ collections:
       Welcome to the blog
     feature_image: "https://picsum.photos/2560/600?image=866"
 
+  category:
+    output: true
+
 # 6. Jekyll collections settings
 defaults:
   -
@@ -78,6 +85,12 @@ defaults:
       path: ""
     values:
       image: "/assets/default-social-image.png" # Default image for sharing
+  -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
 
 # 7. Site settings
 encoding: utf-8 # Make sure the encoding is right

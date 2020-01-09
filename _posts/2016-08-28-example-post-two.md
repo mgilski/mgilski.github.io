@@ -2,6 +2,7 @@
 title: History of the Alembic
 categories:
 - History
+- Ameryka Południowa
 feature_text: |
   The History of the Alembic tool
 feature_image: "/assets/images/test3.jpg"

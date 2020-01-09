@@ -2,9 +2,10 @@
   url: /
   members:
 - title: KRAJE
-  url: /countries/
+  url: 'javascript:;'
   members:
     - title: Ameryka Południowa
+      url: /category/Ameryka Południowa/
       members:
         - title: Peru
         - title: Barzylia
@@ -13,10 +14,12 @@
       members:
         - title: Egipt
 - title: ARTYKUŁY
-  url: /tips/
+  url: /category/Artykuły/
   members:
     - title: Praktycznie
+      url: /category/Praktycznie/
     - title: Przemyślenia
+      url: /category/Przemyślenia/
 
 - title: O NAS
   url: /about-us/

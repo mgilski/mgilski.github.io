@@ -2,6 +2,7 @@
 title: Description of an Alembic
 categories:
 - General
+- Ameryka Południowa
 feature_image: "/assets/images/test2.jpg"
 ---
 

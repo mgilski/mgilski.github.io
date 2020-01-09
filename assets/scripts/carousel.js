@@ -187,8 +187,10 @@
 
   // Initialise carousel
   function initCarousel() {
-    setInitialClasses();
-    setEventListeners();
+    if (items.length > 0) {
+      setInitialClasses();
+      setEventListeners();
+    }
 
     // Set moving to false now that the carousel is ready
     moving = false;

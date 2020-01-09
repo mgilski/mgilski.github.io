@@ -1,3 +1,4 @@
+
 {% if site.data.navigation_header %}
 <nav class="nav  nav--header">
   {% assign counter = 0 %}
@@ -25,17 +26,17 @@
           {% assign counter = counter | plus:1 %}
           <ul class="dropdown1">
             {% for level1 in item.members %}
-              <li><a href="{{ url }}" {% if level1.members %}class="expand"{% endif %}>{{ level1.title }}{% if level1.members %} <b>›</b>{% endif %}</a>
+              <li><a href="{{ level1.url | relative_url }}" {% if level1.members %}class="expand"{% endif %}>{{ level1.title }}{% if level1.members %} <b>›</b>{% endif %}</a>
               {% if level1.members %}
                 <input id="drop--{{counter}}" type="checkbox"/>
                 <label class="label" for="drop--{{counter}}">
-                  <a href="{{ url }}">{{ level1.title }}{% if level1.members %}</a> <b>›</b>{% endif %}
+                  <a href="{{ level1.url | relative_url }}">{{ level1.title }}{% if level1.members %}</a> <b>›</b>{% endif %}
                 </label>
                 {% assign counter = counter | plus:1 %}
                 <ul class="dropdown2">
                   {% for level2 in level1.members %}
                     <li>
-                      <a href="{{ url }}">{{ level2.title }}</a>
+                      <a href="{{ level2.url | relative_url }}">{{ level2.title }}</a>
                     </li>
                   {% endfor %}
                 </ul>

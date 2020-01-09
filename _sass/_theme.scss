@@ -81,6 +81,9 @@ body {
       font-weight: 600;
       position: relative;
       z-index: 100;
+      &.category {
+        margin-bottom: 2rem;
+      }
       &:before {
         $dashWidth: 5rem;
         content: '\A—';
