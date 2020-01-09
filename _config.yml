@@ -88,9 +88,11 @@ defaults:
   -
     scope:
       path: ""
-      type: category
+      type: post
     values:
-      layout: "category"
+      aside: true
+      align: "down"
+      comments: true
 
 # 7. Site settings
 encoding: utf-8 # Make sure the encoding is right

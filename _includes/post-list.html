@@ -11,7 +11,7 @@
             <div>
               <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
               {% include post-date.html %}
-              <a href="{{ site.baseurl }}{{ page.url }}">{{ page.excerpt | markdownify | truncatewords: 60 }}</a>
+              <a href="{{ site.baseurl }}{{ page.url }}">{{ page.excerpt | markdownify }}</a>
             </div>
             <a class="button more" href="{{ site.baseurl }}{{ page.url }}">Czytaj&nbsp;dalej!</a>
 
@@ -33,7 +33,7 @@
             <div>
               <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
               {% include post-meta.html %}
-              {{ page.excerpt | markdownify | truncatewords: 60 }}
+              {{ page.excerpt | markdownify }}
             </div>
 
           </article>

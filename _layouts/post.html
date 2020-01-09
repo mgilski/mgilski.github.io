@@ -1,22 +1,20 @@
 ---
+aside: true
 layout: default
 ---
 
 {% include site-header.html %}
 
-<main class="main  container">
+<main class="main  container post">
 
   <article class="article  article--post  content  typeset">
   	<div class="postlist--cover"></div>
 
     {{ content }}
 
-    {% include nav-share.html %}
-
     {% include post-comments.html %}
 
   </article>
-
   {% if page.aside == true %}{% include site-aside.html %}{% endif %}
 
 </main>

@@ -36,7 +36,7 @@ header {
 }
 
 .article.article--post {
-	$overlap: 2.5rem;
+	$overlap: 3rem;
 
 	margin-bottom: 1.5rem;
 	text-align: center;
@@ -643,8 +643,8 @@ $navWidth: 6.5em;
 }
 
 .about {
-	$height: 10em;
-	$gap: 3em;
+	$height: 15em;
+	$gap: 4em;
 	width: 100%;
 	position: relative;
 	& > div {
@@ -708,4 +708,23 @@ $navWidth: 6.5em;
 			margin-left: (-$height + $gap)/2;
 		}
 	}
+}
+
+
+///////   PAGINATOR //////////
+.nav--paginator > a {
+	border: 1px solid $paletteTile;
+	&:hover {
+		background-color: $paletteTile;
+		color: $paletteBackground
+	}
+}
+
+
+/////////  SEARCH  ////////////////
+.search {
+	@include breakpoint(break-2) {
+		margin-top: -11.5vw;
+	}
+	padding-top: 1rem;
 }

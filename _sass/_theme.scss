@@ -179,6 +179,10 @@ body {
     @include justify-content(center);
     @include flex-direction(row);
   }
+  &.post {
+    @include justify-content(flex-start);
+    @include flex-direction(column);
+  }
 }
 
 .header,
@@ -251,44 +255,52 @@ body {
       z-index: 100;
     }
 
-  
-  @include breakpoint(break-3) {
-    $borderGap: 1.5rem;
+  &.aside--right {
+    @include breakpoint(break-3) {
+      $borderGap: 1.5rem;
 
-    width: $wideWidth;
-    margin: 0;
-    margin-left: 4%;
-    
-    // opacity: 0.5;
-    // transition: opacity .1s;
-    .section {
-      position: relative;
-      top: 0;
-      display: block;
-      height: auto;
-      padding-right: 0;
-      padding-bottom: 1rem;
+      width: $wideWidth;
+      margin: 0;
+      margin-left: 4%;
       
-      .nav--social {
-        text-align: center;
+      // opacity: 0.5;
+      // transition: opacity .1s;
+      .section {
+        position: relative;
+        top: 0;
+        display: block;
+        height: auto;
+        padding-right: 0;
+        padding-bottom: 1rem;
+        
+        .nav--social {
+          text-align: center;
+        }
+      }
+      .cover {
+        width: $imageScale + $borderGap;
+        margin-left: -($imageScale + $borderGap)/2;
+      }
+
+      .about--image {
+        margin-top: -$imageScale/2;
+        margin-left: -$imageScale/2;
+      }
+      &--left {
+        margin-left: 0;
+        margin-right: 4%;
+        order: -1;
+      }
+      &:hover {
+        opacity: 1;
       }
     }
-    .cover {
-      width: $imageScale + $borderGap;
-      margin-left: -($imageScale + $borderGap)/2;
-    }
+  }
 
-    .about--image {
-      margin-top: -$imageScale/2;
-      margin-left: -$imageScale/2;
-    }
-    &--left {
-      margin-left: 0;
-      margin-right: 4%;
-      order: -1;
-    }
-    &:hover {
-      opacity: 1;
+  &.aside--down {
+    @include breakpoint(break-1) {
+      width: 85%;
+      max-width: 45em;
     }
   }
 }

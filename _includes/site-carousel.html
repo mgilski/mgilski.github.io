@@ -1,15 +1,20 @@
+{% assign feature_posts = site.posts | where: "featured",true %}
+
 <div class="carousel-wrapper">
     <div class="carousel">
 
-      <div class="carousel__photo initial" style="background-image: url(https://placekitten.com/1600/533)"></div>
-
-      <div class="carousel__photo" style="background-image: url(https://placekitten.com/g/1600/533)"></div>
-      <div class="carousel__photo" style="background-image: url(https://placekitten.com/1600/533)"></div>
-      <div class="carousel__photo" style="background-image: url(https://placekitten.com/g/1600/533)"></div>
-      <div class="carousel__photo" style="background-image: url(https://placekitten.com/1600/533)"></div>
-      <div class="carousel__photo" style="background-image: url(https://placekitten.com/g/1600/533)"></div>
-      <!-- <img class="carousel__photo" src="https://images.pexels.com/photos/320014/pexels-photo-320014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"> -->
-      <!-- <img class="carousel__photo" src="https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"> -->
+      {% for post in feature_posts %}
+        <div class="feature">
+          <div class="carousel__photo {% if forloop.first %}initial{% endif %}" style="background-image: url({{ post.feature_image | prepend: site.url }})">
+            <div class="container  typeset">
+                <h1 class="category">
+                  <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                </h1>
+                {% include post-meta.html post=post %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
       
 
       
