@@ -256,10 +256,10 @@ $navWidth: 6.5em;
 	    align-items: center;
 	    height: 100%;
 	    display: inline-flex;
-	    margin-left: 2em;
+	    margin-left: 1.5em;
 		// width: $navWidth;
-	    &.item--current a {
-	    	height: 2.4em;
+	    &:hover > a {
+	    	// height: 2.4em;
 	    	border-bottom: 4px solid $paletteAccent;
 	    }
 	    a {
@@ -275,7 +275,7 @@ $navWidth: 6.5em;
 	$width: 12rem;
 	.dropdown1, .dropdown2 {
 		// display: none;
-		top: 98%;
+		top: 95%;
 		z-index: 1000;
 		background-color: $paletteBackground;
 		width: $width;
@@ -457,6 +457,10 @@ $navWidth: 6.5em;
 			label > a {
 				padding: 0;
 			}
+
+			& > a {
+				display: block;
+			}
 		}
 
 		.dropdown1 > li {
@@ -522,8 +526,8 @@ $navWidth: 6.5em;
 		}
 
 		[id^=drop]:checked + label b {
-			transform: rotate(-90deg);
-			// transform-origin: center 35%;
+			// transform-origin: center 40%;
+			transform: rotate(90deg) scaleX(-1);
 			transition-duration: 0.15s;
 		}
 
@@ -709,6 +713,7 @@ $navWidth: 6.5em;
 ///////   PAGINATOR //////////
 .nav--paginator > a {
 	border: 1px solid $paletteTile;
+	padding: 0.35rem 0.5rem !important;
 	&:hover {
 		background-color: $paletteTile;
 		color: $paletteBackground
@@ -725,4 +730,13 @@ $navWidth: 6.5em;
 	input {
 		margin-bottom: 1rem;
 	}
+}
+
+
+/////////////////    MAP  //////////
+
+main.map {
+	margin-top: -1rem;
+	flex-direction: column;
+	justify-content: flex-start;
 }

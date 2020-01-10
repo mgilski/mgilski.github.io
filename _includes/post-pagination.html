@@ -1,13 +1,13 @@
 <nav class="nav  nav--paginator">
 
   {% if paginator.previous_page %}
-    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="pagination  pagination--previous">&larr; Nowsze wpisy</a>
+    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}#main" class="pagination  pagination--previous">&larr; Nowsze wpisy</a>
   {% else %}
     <span class="pagination  pagination--previous"></span>
   {% endif %}
 
   {% if paginator.next_page %}
-    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="pagination  pagination--next">Starsze wpisy &rarr;</a>
+    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}#main" class="pagination  pagination--next">Starsze wpisy &rarr;</a>
   {% else %}
     <span class="pagination  pagination--next"></span>
   {% endif %}

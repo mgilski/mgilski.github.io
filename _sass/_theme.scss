@@ -30,6 +30,7 @@ body {
   }
   .logo {
     @include flex(0 0 auto);
+    z-index: 10;
   }
   .container {
     @include flexbox;
@@ -56,12 +57,12 @@ body {
   background-position: center;
   .container {
     min-height: 33vw;
+    height: 100%;
     @include flex-direction(column);
     @include justify-content(center);
     width: 75%;
     text-transform: uppercase;
-    small {
-      margin-bottom: 4rem;   
+    small { 
       position: relative;
       z-index: 100;
       text-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
@@ -74,9 +75,12 @@ body {
       line-height: 3rem;
       text-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
       @include breakpoint(break-1) {
+        font-size: 250%;
+        line-height: 3.75rem;
+      }
+      @include breakpoint(break-3) {
         font-size: 300%;
         line-height: 4.5rem;
-
       }
       font-weight: 600;
       position: relative;
