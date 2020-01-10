@@ -1,10 +1,11 @@
 <div class="form  form--search">
   <form id="contact-form" action="">
     <input class="input" id="search" type="search" name="search" placeholder="np. Ameryka Południowa" autocomplete="off" />
-
-    <ul class="list  list--results" id="list">
-        <!-- results go here -->
-    </ul>
+    <div class="post--list list category">
+      <div class="grid--wrapper" id="list">
+          <!-- results go here -->
+      </div>
+    </div>
   </form>
 </div>
 
@@ -21,7 +22,7 @@
   function findResults(termToMatch, pages) {
     return pages.filter(item => {
       const regex = new RegExp(termToMatch, 'gi');
-      return item.title.match(regex) || item.content.match(regex);
+      return item.title.match(regex) || item.content.match(regex) || item.categories.match(regex);
     });
   }
 
@@ -29,12 +30,20 @@
     const resultsArray = findResults(this.value, pages);
     const html = resultsArray.map(item => {
       return `
-        <li class="item  item--result">
-          <article class="article  typeset">
-            <h4><a href="${item.url}">${item.title}</a></h4>
-            <p>${item.excerpt}</p>
+        <div>
+        {% if page.feature_image %}
+            <a href="{{ site.baseurl }}${item.url}"><img class="preview--image" src="${item.feature_image}"></a>
+          {% endif %}
+          <article class="article article--post post--tile">
+            <div class="postlist--cover"></div>
+            <div class="tile--content">
+              <h2><a href="{{ site.baseurl }}${item.url}">${item.title}</a></h2>
+              <a href="{{ site.baseurl }}${item.url}"><p>${item.excerpt}</p></a>
+            </div>
+            <a class="button more" href="{{ site.baseurl }}${item.url}">Czytaj&nbsp;dalej!</a>
+
           </article>
-        </li>`;
+        </div>`;
     }).join('');
     if ((resultsArray.length == 0) || (this.value == '')) {
       resultsList.innerHTML = `<p>Nic nie znaleziono :(</p>`;
@@ -43,10 +52,21 @@
     }
   }
 
+  function delay(callback, ms) {
+    var timer = 0;
+    return function() {
+      var context = this, args = arguments;
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        callback.apply(context, args);
+      }, ms || 0);
+    };
+  }
+
   const field = document.querySelector('#search');
   const resultsList = document.querySelector('#list');
 
-  field.addEventListener('keyup', displayResults);
+  field.addEventListener('keyup', delay(displayResults, 500));
 
   field.addEventListener('keypress', function(event) {
     if (event.keyCode == 13) {
