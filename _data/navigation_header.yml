@@ -4,7 +4,7 @@
 - title: TRASA
   url: /map
   members:
-- title: KRAJE ›
+- title: KRAJE
   url: 'javascript:;'
   members:
     - title: Ameryka Południowa
@@ -16,7 +16,7 @@
     - title: Afryka
       members:
         - title: Egipt
-- title: ARTYKUŁY ›
+- title: ARTYKUŁY
   url: /category/Artykuły/
   members:
     - title: Praktycznie

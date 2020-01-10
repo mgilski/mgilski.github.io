@@ -258,9 +258,10 @@ $navWidth: 6.5em;
 	    display: inline-flex;
 	    margin-left: 1.5em;
 		// width: $navWidth;
-	    &:hover > a {
+	    &:hover > a:not(.expand) {
 	    	// height: 2.4em;
 	    	border-bottom: 4px solid $paletteAccent;
+	    	border-top: 4px solid rgba(0, 0, 0, 0);
 	    }
 	    a {
 	    	margin: auto;
@@ -272,10 +273,10 @@ $navWidth: 6.5em;
 ////////  DROPDOWN //////////
 
 * {
-	$width: 12rem;
+	$width: 13rem;
 	.dropdown1, .dropdown2 {
 		// display: none;
-		top: 95%;
+		top: 98%;
 		z-index: 1000;
 		background-color: $paletteBackground;
 		width: $width;
@@ -299,6 +300,13 @@ $navWidth: 6.5em;
 
 	.dropdown0 > li {
 	    position: relative;
+	    a.expand {
+	    	padding-right: 0.5rem;
+	    }
+	    & > a + b {
+	    	transform: rotate(90deg);
+	    	display: inline-block;
+	    }
 	}
 
 	.dropdown1 {
@@ -408,7 +416,7 @@ $navWidth: 6.5em;
 		position: absolute;
 		color: $paletteTile;
 		width: 26px;
-	    right: 1.4em;
+	    right: 1.8rem;
 	    transform: scale(2, 1);
 	    top: -1.4em;
 	}
@@ -507,7 +515,8 @@ $navWidth: 6.5em;
 			margin-bottom: 0;
 			padding-top: 0;
 			line-height: 30px;
-			b {
+			b:after {
+				content: "›";
 				float: right;
 				margin-right: 1rem;
 				font-size: 150%;
@@ -525,7 +534,7 @@ $navWidth: 6.5em;
 			display: block;
 		}
 
-		[id^=drop]:checked + label b {
+		[id^=drop]:checked + label b:after {
 			// transform-origin: center 40%;
 			transform: rotate(90deg) scaleX(-1);
 			transition-duration: 0.15s;
