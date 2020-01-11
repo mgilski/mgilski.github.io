@@ -7,7 +7,7 @@
         <div class="feature">
           <div class="carousel__photo {% if forloop.first %}initial{% endif %}" style="background-image: url({{ post.feature_image | prepend: site.url }})">
             <div class="container  typeset">
-                <h1 class="category">
+                <h1>
                   <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                 </h1>
                 {% include post-meta.html post=post %}

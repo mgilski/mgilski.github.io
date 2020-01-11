@@ -9,7 +9,7 @@
 {% if feature_image and page.layout == 'post' %}
   <div class="feature" style="background-image: url({{ feature_image | prepend: site.url }})">
     <div class="container  typeset">
-		    <h1>{{ page.title }}</h1><br>
+		    <h1>{{ page.title }}</h1>
 	      <!-- {{ feature_text | markdownify }} -->
 	      {% include post-meta.html %}
     </div>
@@ -17,13 +17,13 @@
 {% elsif feature_image and page.layout == 'category' %}
 <div class="feature" style="background-image: url({{ feature_image | prepend: site.url }})">
     <div class="container  typeset">
-        <h1 class="category">{{ page.tag }}</h1>
+        <h1 class="no--meta">{{ page.tag }}</h1>
     </div>
 </div>
 {% elsif feature_image and page.layout == 'page' %}
 <div class="feature" style="background-image: url({{ feature_image | prepend: site.url }})">
     <div class="container  typeset">
-        <h1 class="category">{{ page.feature_header }}</h1>
+        <h1 class="no--meta">{{ page.feature_header }}</h1>
     </div>
 </div>
 {% elsif page.layout == 'blog' %}

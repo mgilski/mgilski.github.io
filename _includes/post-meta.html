@@ -16,5 +16,23 @@
 
 <small class="small  post-meta">
   {% assign date_format = site.date_format | default: "%d %b %Y" %}
-  {{ categories | append: "&nbsp;&middot;&nbsp;" }}<time datetime="{{ src.date | date_to_xmlschema }}" class="time">{{ src.date | date: date_format }}</time>
+  {{ categories | append: "&nbsp;&middot;&nbsp;" }}<time datetime="{{ src.date | date_to_xmlschema }}" class="time">
+    {% assign m = src.date | date: "%-m" %}
+    {{ src.date | date: "%-d" }}
+    {% case m %}
+      {% when '1' %}stycznia
+      {% when '2' %}lutego
+      {% when '3' %}marca
+      {% when '4' %}kwietnia
+      {% when '5' %}maja
+      {% when '6' %}czerwca
+      {% when '7' %}lipca
+      {% when '8' %}sierpnia
+      {% when '9' %}września
+      {% when '10' %}października
+      {% when '11' %}listopada
+      {% when '12' %}grudnia
+    {% endcase %}
+    {{ src.date | date: "%Y" }}
+  </time>
 </small>

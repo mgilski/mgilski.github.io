@@ -65,6 +65,7 @@ body {
     small { 
       position: relative;
       z-index: 100;
+      margin-top: 1.5rem;
       text-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
     }
     *, h1 {
@@ -85,7 +86,7 @@ body {
       font-weight: 600;
       position: relative;
       z-index: 100;
-      &.category {
+      &.no--meta {
         margin-bottom: 2rem;
       }
       &:before {

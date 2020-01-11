@@ -133,8 +133,8 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
 #   url: /search/
 
 navigation_footer:
-- title: Created by David Darnes
-  url: https://darn.es
+- title:
+  url: https://facebook.com
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   Facebook: https://facebook.com
