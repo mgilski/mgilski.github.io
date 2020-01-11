@@ -7,7 +7,7 @@
 {% endif %}
 
 {% if feature_image and page.layout == 'post' %}
-  <div class="feature" style="background-image: url({{ feature_image | prepend: site.url }})">
+  <div class="feature" style="background-image: url({{ feature_image | prepend: site.baseurl }})">
     <div class="container  typeset">
 		    <h1>{{ page.title }}</h1>
 	      <!-- {{ feature_text | markdownify }} -->
@@ -15,13 +15,13 @@
     </div>
   </div>
 {% elsif feature_image and page.layout == 'category' %}
-<div class="feature" style="background-image: url({{ feature_image | prepend: site.url }})">
+<div class="feature" style="background-image: url({{ feature_image | prepend: site.baseurl }})">
     <div class="container  typeset">
         <h1 class="no--meta">{{ page.tag }}</h1>
     </div>
 </div>
 {% elsif feature_image and page.layout == 'page' %}
-<div class="feature" style="background-image: url({{ feature_image | prepend: site.url }})">
+<div class="feature" style="background-image: url({{ feature_image | prepend: site.baseurl }})">
     <div class="container  typeset">
         <h1 class="no--meta">{{ page.feature_header }}</h1>
     </div>

@@ -5,7 +5,7 @@
 
       {% for post in feature_posts %}
         <div class="feature">
-          <div class="carousel__photo {% if forloop.first %}initial{% endif %}" style="background-image: url({{ post.feature_image | prepend: site.url }})">
+          <div class="carousel__photo {% if forloop.first %}initial{% endif %}" style="background-image: url({{ post.feature_image | prepend: site.baseurl }})">
             <div class="container  typeset">
                 <h1>
                   <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
