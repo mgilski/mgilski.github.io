@@ -722,14 +722,21 @@ $navWidth: 6.5em;
 }
 
 
-///////   PAGINATOR //////////
+///////   PAGINATOR + navigation //////////
 .nav--paginator > a {
 	border: 1px solid $paletteTile;
 	padding: 0.35rem 0.5rem !important;
 	margin: 0;
+	text-align: center;
 	&:hover {
 		background-color: $paletteTile;
 		color: $paletteBackground
+	}
+	&.pagination--previous {
+		margin-right: 1rem;
+	}
+	&.pagination--next {
+		margin-left: 1rem;
 	}
 }
 
@@ -778,7 +785,7 @@ main.world--map {
 	position: sticky;
 	bottom: 25px;
 	right: 30px;
-	z-index: 999;
+	z-index: 100;
 	outline: none;
 	background-color: $paletteBackground;
 	color: $paletteTile;
@@ -818,21 +825,73 @@ main.world--map {
 }
 
 
-///////////  POST NAVIGATION ////////////////
-.PageNavigation {
-  font-size: 14px;
-  display: block;
-  width: auto;
-  overflow: hidden;
-}
+/////////////  GALLERY ////////////
+.gallery--wrapper {
+	.gallery--button {
+		padding: 2rem;
+		cursor: pointer;
+		h2 {
+			color: white;
+		}
+	}
 
-.PageNavigation a {
-  display: block;
-  width: 50%;
-  float: left;
-  margin: 1em 0;
-}
+	#gallery {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1000;
+		.backdrop {
+			background-color: rgba(0, 0, 0, .9);
+			width: 100%;
+			height: 100%;
+			z-index: 1000;
+		}
+		img {
+			display: none;
+			max-width: 90%;
+			max-height: 90%;
+			object-fit: contain;
+			position: absolute;
+			margin: auto;
+			top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+			z-index: 1010;
+		}
 
-.PageNavigation .next {
-  text-align: right;
+		.gallery--nav {
+			$height: 5rem;
+			position: absolute;
+			top: 50%;
+			margin-top: -$height/2;
+			height: $height;
+			width: $height;
+			color: LightGrey;
+			font-size: 300%;
+			line-height: 0;
+			padding: $height/2 0;
+			cursor: pointer;
+
+			&--next {
+				right: 3%;
+				text-align: right;
+				&:after {
+					content: "❯";
+				}
+			}
+
+			&--prev {
+				left: 3%;
+				text-align: left;
+				&:after {
+					content: "❮";
+				}
+			}
+		}
+	}
+
 }

@@ -1,6 +1,6 @@
   <div class="carousel-wrapper">
     <div class="carousel">
-      {% assign imgs = include.images | split: ", " %}
+      {% assign imgs = include.images | split: "," %}
 
       {% if imgs[1] %}
         <img class="carousel__photo initial" src="{{ imgs[0] }}">
