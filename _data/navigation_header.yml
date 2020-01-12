@@ -30,8 +30,8 @@
       url: /category/Przemyślenia/
 
 - title: O NAS
-  url: /about-us/
+  url: /about-us
   members:
 - title: "<span style='font-size: 150%'>⌕</span>"
-  url: /search/
+  url: /search
   members:

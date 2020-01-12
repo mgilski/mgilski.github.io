@@ -1,8 +1,8 @@
-const version = '20200112001126';
+const version = '20200112013710';
 const cacheName = `static::${version}`;
 
 const buildContentBlob = () => {
-  return ["/2019/09/19/peru.html","/2019/09/18/peru.html","/2019/09/17/peru.html","/2019/09/16/peru.html","/2019/09/15/peru.html","/2019/09/14/peru.html","/2019/09/13/peru.html","/2016/08/29/example-post-three.html","/2016/08/29/example-post-four.html","/2016/08/28/example-post-two.html","/about-us","/manifest.json","/map","/assets/search.json","/search","/assets/styles.css","/redirects.json","/sitemap.xml","/robots.txt","/category/Afryka/index.html","/category/Ameryka Południowa/index.html","/category/Ameryka Południowa/page/2/index.html","/category/Artykuły/index.html","/category/Brazylia/index.html","/category/Egipt/index.html","/category/Peru/index.html","/category/Praktycznie/index.html","/category/Przemyślenia/index.html","/category/Urugwaj/index.html","/index.html","/page/2/index.html","/feed.xml","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
+  return ["/2019/09/19/peru","/2019/09/18/peru","/2019/09/17/peru","/2019/09/16/peru","/2019/09/15/peru","/2019/09/14/peru","/2019/09/13/peru","/2016/08/29/example-post-three","/2016/08/29/example-post-four","/2016/08/28/example-post-two","/about-us","/manifest.json","/map","/assets/search.json","/search","/assets/styles.css","/redirects.json","/sitemap.xml","/robots.txt","/category/Afryka/index.html","/category/Ameryka Południowa/index.html","/category/Ameryka Południowa/page/2/index.html","/category/Artykuły/index.html","/category/Brazylia/index.html","/category/Egipt/index.html","/category/Peru/index.html","/category/Praktycznie/index.html","/category/Przemyślenia/index.html","/category/Urugwaj/index.html","/index.html","/page/2/index.html","/feed.xml","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
   ]
 }
 

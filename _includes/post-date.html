@@ -17,5 +17,6 @@
 	  {% when '11' %}listopada
 	  {% when '12' %}grudnia
 	{% endcase %}
+	{{ include.src.date | date: "%Y" }}
   </time>
 </small>

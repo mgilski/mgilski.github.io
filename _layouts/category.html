@@ -13,7 +13,7 @@ layout: page
             <div class="postlist--cover"></div>
             <div class="tile--content">
               <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
-              {% include post-date.html %}
+              {% include post-date.html src=page %}
               <a href="{{ site.baseurl }}{{ page.url }}">{{ page.excerpt | markdownify }}</a>
             </div>
             <a class="button more" href="{{ site.baseurl }}{{ page.url }}">Czytaj&nbsp;dalej!</a>
