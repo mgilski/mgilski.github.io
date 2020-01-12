@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pl-PL"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://mgilski.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://mgilski.github.io//" rel="alternate" type="text/html" hreflang="pl-PL" /><updated>2020-01-12T02:21:31+00:00</updated><id>https://mgilski.github.io//feed.xml</id><title type="html">JustAway</title><subtitle>5 lat temu ruszyliśmy na pierwszą autostopową wyprawę i tak nam zostało. Obecnie przemierzamy świat z plecakiami, namiotem i optymistycznym nastawieniem, za to bez biletu powrotnego.</subtitle><author><name>Maciej Gilski</name></author><entry><title type="html">Peru to była bardzo wspaniała wycieczka</title><link href="https://mgilski.github.io//2019/09/19/peru" rel="alternate" type="text/html" title="Peru to była bardzo wspaniała wycieczka" /><published>2019-09-19T00:00:00+01:00</published><updated>2019-09-19T00:00:00+01:00</updated><id>https://mgilski.github.io//2019/09/19/peru</id><content type="html" xml:base="https://mgilski.github.io//2019/09/19/peru">&lt;p&gt;&lt;strong&gt;Plan był bardzo prosty. Dojechać, przeżyć, odpocząć, wrócić. Nie obraliśmy zbyt ambitnych celów na pierwszą wspólną podróż. Wtedy jeszcze nie mieliśmy dużej wprawy w wyjazdach na Zachód i samo dostanie się na odpowiednią wylotówkę z Poznania zajęło dużo czasu.&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pl-PL"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="https://mgilski.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://mgilski.github.io//" rel="alternate" type="text/html" hreflang="pl-PL" /><updated>2020-01-12T05:20:12+00:00</updated><id>https://mgilski.github.io//feed.xml</id><title type="html">JustAway</title><subtitle>5 lat temu ruszyliśmy na pierwszą autostopową wyprawę i tak nam zostało. Obecnie przemierzamy świat z plecakiami, namiotem i optymistycznym nastawieniem, za to bez biletu powrotnego.</subtitle><author><name>Maciej Gilski</name></author><entry><title type="html">Peru to była bardzo wspaniała wycieczka</title><link href="https://mgilski.github.io//2019/09/19/peru" rel="alternate" type="text/html" title="Peru to była bardzo wspaniała wycieczka" /><published>2019-09-19T00:00:00+01:00</published><updated>2019-09-19T00:00:00+01:00</updated><id>https://mgilski.github.io//2019/09/19/peru</id><content type="html" xml:base="https://mgilski.github.io//2019/09/19/peru">&lt;p&gt;&lt;strong&gt;Plan był bardzo prosty. Dojechać, przeżyć, odpocząć, wrócić. Nie obraliśmy zbyt ambitnych celów na pierwszą wspólną podróż. Wtedy jeszcze nie mieliśmy dużej wprawy w wyjazdach na Zachód i samo dostanie się na odpowiednią wylotówkę z Poznania zajęło dużo czasu.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;!-- more --&gt;
 
@@ -15,7 +15,7 @@
       
         &lt;img class=&quot;carousel__photo initial&quot; src=&quot;https://placekitten.com/g/900/600&quot; /&gt;
         
-          &lt;img class=&quot;carousel__photo&quot; src=&quot;https://placekitten.com/900/600&quot; /&gt;
+          &lt;img class=&quot;carousel__photo&quot; src=&quot; https://placekitten.com/900/600&quot; /&gt;
         
         &lt;div class=&quot;carousel__button--next&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;carousel__button--prev&quot;&gt;&lt;/div&gt;
@@ -68,7 +68,7 @@
       
         &lt;img class=&quot;carousel__photo initial&quot; src=&quot;https://placekitten.com/g/900/600&quot; /&gt;
         
-          &lt;img class=&quot;carousel__photo&quot; src=&quot;https://placekitten.com/900/600&quot; /&gt;
+          &lt;img class=&quot;carousel__photo&quot; src=&quot; https://placekitten.com/900/600&quot; /&gt;
         
         &lt;div class=&quot;carousel__button--next&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;carousel__button--prev&quot;&gt;&lt;/div&gt;
@@ -121,7 +121,7 @@
       
         &lt;img class=&quot;carousel__photo initial&quot; src=&quot;https://placekitten.com/g/900/600&quot; /&gt;
         
-          &lt;img class=&quot;carousel__photo&quot; src=&quot;https://placekitten.com/900/600&quot; /&gt;
+          &lt;img class=&quot;carousel__photo&quot; src=&quot; https://placekitten.com/900/600&quot; /&gt;
         
         &lt;div class=&quot;carousel__button--next&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;carousel__button--prev&quot;&gt;&lt;/div&gt;
@@ -174,7 +174,7 @@
       
         &lt;img class=&quot;carousel__photo initial&quot; src=&quot;https://placekitten.com/g/900/600&quot; /&gt;
         
-          &lt;img class=&quot;carousel__photo&quot; src=&quot;https://placekitten.com/900/600&quot; /&gt;
+          &lt;img class=&quot;carousel__photo&quot; src=&quot; https://placekitten.com/900/600&quot; /&gt;
         
         &lt;div class=&quot;carousel__button--next&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;carousel__button--prev&quot;&gt;&lt;/div&gt;
@@ -227,7 +227,7 @@
       
         &lt;img class=&quot;carousel__photo initial&quot; src=&quot;https://placekitten.com/g/900/600&quot; /&gt;
         
-          &lt;img class=&quot;carousel__photo&quot; src=&quot;https://placekitten.com/900/600&quot; /&gt;
+          &lt;img class=&quot;carousel__photo&quot; src=&quot; https://placekitten.com/900/600&quot; /&gt;
         
         &lt;div class=&quot;carousel__button--next&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;carousel__button--prev&quot;&gt;&lt;/div&gt;
@@ -280,7 +280,7 @@
       
         &lt;img class=&quot;carousel__photo initial&quot; src=&quot;https://placekitten.com/g/900/600&quot; /&gt;
         
-          &lt;img class=&quot;carousel__photo&quot; src=&quot;https://placekitten.com/900/600&quot; /&gt;
+          &lt;img class=&quot;carousel__photo&quot; src=&quot; https://placekitten.com/900/600&quot; /&gt;
         
         &lt;div class=&quot;carousel__button--next&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;carousel__button--prev&quot;&gt;&lt;/div&gt;
@@ -333,7 +333,7 @@
       
         &lt;img class=&quot;carousel__photo initial&quot; src=&quot;https://placekitten.com/g/900/600&quot; /&gt;
         
-          &lt;img class=&quot;carousel__photo&quot; src=&quot;https://placekitten.com/900/600&quot; /&gt;
+          &lt;img class=&quot;carousel__photo&quot; src=&quot; https://placekitten.com/900/600&quot; /&gt;
         
         &lt;div class=&quot;carousel__button--next&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;carousel__button--prev&quot;&gt;&lt;/div&gt;
