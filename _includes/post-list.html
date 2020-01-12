@@ -4,7 +4,7 @@
       {% for page in paginator.posts %}
         <li class="item  item--post">
           {% if page.feature_image %}
-            <a href="{{ site.baseurl }}{{ page.url }}"><img class="preview--image" src="{{ page.feature_image | prepend: site.url}}"></a>
+            <a href="{{ site.baseurl }}{{ page.url }}"><img class="preview--image" src="{{ page.feature_image | prepend: site.baseurl}}"></a>
           {% endif %}
           <article class="article  article--post list">
             <div class="postlist--cover"></div>
@@ -28,7 +28,7 @@
         <li class="item  item--post">
           <article class="article  article--post">
             {% if page.feature_image %}
-              <img src="{{ page.feature_image | prepend: site.url}}">
+              <img src="{{ page.feature_image | prepend: site.baseurl}}">
             {% endif %}
             <div>
               <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
